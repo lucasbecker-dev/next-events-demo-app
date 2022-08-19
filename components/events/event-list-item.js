@@ -19,13 +19,9 @@ const EventListItem = (props) => {
 
   return (
     <li className={classes.item}>
-      <Image
-        height='10rem'
-        width='100%'
-        objectFit='cover'
-        src={'/' + event.image}
-        alt={event.title}
-      />
+      <picture>
+        <img src={'/' + event.image} alt={event.title} />
+      </picture>
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{event.title}</h2>
